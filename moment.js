@@ -2110,7 +2110,7 @@ function configFromRFC2822(config) {
     if (match) {
         dayFormat = match[1] ? 'ddd' + ((match[1].length === 5) ? ', ' : ' ') : '';
         dateFormat = 'D MMM ' + ((match[2].length > 10) ? 'YYYY ' : 'YY ');
-        timeFormat = 'HH:mm' + (match[4] ? ':ss' : '');
+        timeFormat = 'HH:mm a' + (match[4] ? ':ss' : '');
 
         // TODO: Replace the vanilla JS Date object with an indepentent day-of-week check.
         if (match[1]) { // day of week given
